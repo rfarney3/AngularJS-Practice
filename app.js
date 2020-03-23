@@ -2,7 +2,6 @@ var app = angular.module('StocksApp', []);
 
 app.service("sharedProperties", function() {
   let property;
-  let stocks;
 
   return {
     getProperty: function () {
@@ -46,8 +45,7 @@ app.controller('AddOrderController', function($scope, $http, sharedProperties) {
   })
 });
 
-app.controller('ShowOrdersController', function($scope, $http, sharedProperties, $routeParams) {
+app.controller('ShowOrdersController', function($scope, sharedProperties, $routeParams) {
   let result = sharedProperties.stocks.filter(obj => obj.symbol === $routeParams.symbol)[0]
-  console.log(result)
   $scope.stock = result;
 });
