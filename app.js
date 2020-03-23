@@ -1,17 +1,6 @@
 var app = angular.module('StocksApp', []);
 
-app.service("sharedProperties", function() {
-  let property;
-
-  return {
-    getProperty: function () {
-        return property;
-    },
-    setProperty: function(value) {
-        property = value;
-    }
-};
-})
+app.service("sharedProperties", function() {})
 
 app.config(['$routeProvider',
   function($routeProvider) {
