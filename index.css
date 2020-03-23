@@ -1,0 +1,17 @@
+#header {
+    text-align: center;
+}
+
+#search {
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+li:hover {
+    background-color: greenyellow;
+}
+
+ul {
+    text-align: center;
+}

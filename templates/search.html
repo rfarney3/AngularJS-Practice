@@ -1,0 +1,20 @@
+<div>
+    <h1 id="header">Find Your Favorite Stocks</h1>
+    <input
+        id="search"
+        ng-model="query" 
+        ng-model-options="{ debounce: 800 }"
+        placeholder="Enter your stock name or symbol..."
+    >
+</div>
+<div>
+    <ul ng-if="query" class="list-inline">
+        <li ng-click="selectText($event)" id="list-item" ng-repeat="item in stocks | filter: query | limitTo: 10" class="list-inline-item">
+            <a href="#NewPage/{{item.symbol}}">
+                <h3>{{ item.symbol | uppercase}}</h3>
+                <p class="lead mb-0">{{ item.name }}</p>
+            </a>
+        </li>
+    </ul>
+</div>
+
